@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/Images/Capture.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/db/create.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/db/sheet12.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/db/sheet12.mwb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/config/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/CarOption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/CarOptionId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/Sale.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/SaleId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/SalesPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/service/QueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0-sources.jar!/jakarta/persistence/Basic.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/opt/maven" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="28c8MwYHWN8FLRqslzMYVVDpZNs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/youssef/code/college/database/CarShowroom/src/main/java/college/database",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/college/database" />
+      <recent name="$PROJECT_DIR$/src/main/java/college/database/" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="college.database.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="college.database.Test" />
+      <module name="carshowroom" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="college.database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.college.database.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="" />
+      <created>1651504475648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651504475648</updated>
+      <workItem from="1651504477178" duration="5047000" />
+      <workItem from="1651510965593" duration="5223000" />
+      <workItem from="1651516613966" duration="125000" />
+      <workItem from="1651573888013" duration="32000" />
+      <workItem from="1651579108858" duration="600000" />
+      <workItem from="1651580281985" duration="7479000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="jakarta.persistence.PersistenceException" package="jakarta.persistence" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

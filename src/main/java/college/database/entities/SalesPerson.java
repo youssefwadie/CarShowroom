@@ -1,0 +1,72 @@
+package college.database.entities;
+
+import jakarta.persistence.*;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
+
+@Entity
+@Table(name = "salesperson")
+@NamedQuery(name = SalesPerson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, query = "SELECT s FROM SalesPerson s WHERE s.name LIKE CONCAT(:prefix, '%')")
+@NamedQuery(name = SalesPerson.GET_SALESPEOPLE_WITH_NO_PHONE, query = "SELECT s FROM SalesPerson s WHERE s.phone IS NULL")
+@NamedQuery(name = SalesPerson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, query = "SELECT s FROM SalesPerson s JOIN FETCH s.sales")
+public class SalesPerson implements Serializable {
+
+    // All these queries can return multiple values in a different dataset so let's be as generic as we can
+
+    // 6
+    public static final String GET_SALESPEOPLE_WITH_NAME_STARTING_WITH = "getSalespeopleWithNameStartingWith";
+
+    // 7
+    public static final String GET_SALESPEOPLE_WITH_NO_PHONE = "getSalespeopleWithNoPhone";
+
+    // 9
+    public static final String GET_SALESPEOPLE_WITH_ALL_THEIR_SALES = "getSalesPersonsWithSales";
+
+    @Id
+    @Column(name = "id")
+    private String id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @OneToMany
+    @JoinColumn(name = "salesperson_id", referencedColumnName = "id")
+    private Collection<Sale> sales = new ArrayList<>();
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Collection<Sale> getSales() {
+        return sales;
+    }
+
+    public void setSales(Collection<Sale> sales) {
+        this.sales = sales;
+    }
+}
