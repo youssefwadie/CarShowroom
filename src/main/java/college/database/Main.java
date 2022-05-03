@@ -8,7 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 // TODO: query 4 and 8 (views)
-public class Test {
+public class Main {
     public static void main(String[] args) {
 
         // change all logging levels to error level
@@ -21,10 +21,9 @@ public class Test {
             Method[] methods = queriesClass.getDeclaredMethods();
 
             for (Method method : methods) {
-                String methodName = method.getName();
+                String methodName = "Query " + method.getName().replaceAll("[^0-9]", "");
 
                 // title == capitalize first character
-                methodName = methodName.substring(0, 1).toUpperCase() + methodName.substring(1);
 
                 System.out.println(methodName);
                 System.out.println("========================================================================");

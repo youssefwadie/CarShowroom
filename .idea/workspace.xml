@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/jpa-buddy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/Images/Capture.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/db/create.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/db/sheet12.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/db/sheet12.mwb.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/config/Producer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/CarOption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/CarOptionId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/Sale.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/SaleId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/entities/SalesPerson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/java/college/database/service/QueryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarShowroom/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +115,7 @@
       <workItem from="1651516613966" duration="125000" />
       <workItem from="1651573888013" duration="32000" />
       <workItem from="1651579108858" duration="600000" />
-      <workItem from="1651580281985" duration="7479000" />
+      <workItem from="1651580281985" duration="7909000" />
     </task>
     <servers />
   </component>
