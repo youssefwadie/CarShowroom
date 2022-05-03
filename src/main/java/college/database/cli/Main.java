@@ -21,6 +21,7 @@ public class Main {
             Class.forName(EntityManagerProducer.class.getName());
         } catch (ClassNotFoundException e) {
             System.err.println("Cannot load the EntityManagerFactory class");
+            System.exit(1);
         }
 
         int choice = 0;
