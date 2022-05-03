@@ -2,6 +2,7 @@ package college.database.cli;
 
 import college.database.config.EntityManagerProducer;
 import college.database.service.Queries;
+import jakarta.persistence.PersistenceException;
 
 import java.util.Scanner;
 import java.util.logging.Level;

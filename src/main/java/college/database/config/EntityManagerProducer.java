@@ -4,14 +4,21 @@ package college.database.config;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceException;
 
 public class EntityManagerProducer {
-    private final EntityManagerFactory factory;
+    private EntityManagerFactory factory;
 
     private static final EntityManagerProducer instance = new EntityManagerProducer();
 
+
     private EntityManagerProducer() {
-        this.factory = Persistence.createEntityManagerFactory("CarShowroomPU");
+        try {
+            this.factory = Persistence.createEntityManagerFactory("CarShowroomPU");
+        } catch (PersistenceException e) {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
     }
 
     // mimic DI
