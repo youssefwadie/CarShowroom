@@ -5,12 +5,12 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class Producer {
+public class EntityManagerProducer {
     private final EntityManagerFactory factory;
 
-    private static final Producer instance = new Producer();
+    private static final EntityManagerProducer instance = new EntityManagerProducer();
 
-    private Producer() {
+    private EntityManagerProducer() {
         this.factory = Persistence.createEntityManagerFactory("CarShowroomPU");
     }
 
@@ -19,4 +19,9 @@ public class Producer {
         return instance.factory.createEntityManager();
     }
 
+    public static void closeEntityManagerFactory() {
+        if (instance.factory.isOpen()) {
+            instance.factory.close();
+        }
+    }
 }

@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="" />
+    <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/college/database/cli/Colors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/config/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/config/EntityManagerProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +29,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0-sources.jar!/jakarta/persistence/Basic.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///usr/lib/jvm/java-17-temurin/lib/src.zip!/java.base/java/lang/ClassLoader.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -60,7 +68,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/youssef/code/college/database/CarShowroom/src/main/java/college/database",
+    "last_opened_file_path": "/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/cli",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -74,6 +82,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/college/database/cli" />
       <recent name="$PROJECT_DIR$/src/main/java/college/database" />
       <recent name="$PROJECT_DIR$/src/main/java/college/database/" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -83,12 +92,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="college.database.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="college.database.Test" />
+    <configuration name="college.database.cli.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="college.database.cli.Main" />
       <module name="carshowroom" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="college.database.*" />
+          <option name="PATTERN" value="college.database.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,7 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.college.database.Test" />
+        <item itemvalue="Application.college.database.cli.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -116,6 +125,8 @@
       <workItem from="1651573888013" duration="32000" />
       <workItem from="1651579108858" duration="600000" />
       <workItem from="1651580281985" duration="7909000" />
+      <workItem from="1651588254683" duration="320000" />
+      <workItem from="1651594834017" duration="5894000" />
     </task>
     <servers />
   </component>

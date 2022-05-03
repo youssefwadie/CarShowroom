@@ -1,6 +1,6 @@
 package college.database.service;
 
-import college.database.config.Producer;
+import college.database.config.EntityManagerProducer;
 import college.database.entities.Car;
 import college.database.entities.CarOption;
 import college.database.entities.Sale;
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Queries {
     public static void query1() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             Car toyotaCorolla = manager.createNamedQuery(Car.GET_CAR_BY_MANUFACTURER_AND_MODEL, Car.class)
                     .setParameter("manufacturer", "Toyota")
@@ -31,7 +31,7 @@ public class Queries {
     }
 
     public static void query2() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             List<Car> carsBetween = manager.createNamedQuery(Car.GET_CARS_IN_RANGE, Car.class)
                     .setParameter("minPrice", 150000)
@@ -49,7 +49,7 @@ public class Queries {
     }
 
     public static void query3() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             BigDecimal interest = new BigDecimal(1.07d);
 
@@ -69,7 +69,7 @@ public class Queries {
 
 
     public static void query5() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             List<Car> cars = manager.createNamedQuery(Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, Car.class)
                     .getResultList();
@@ -89,7 +89,7 @@ public class Queries {
     }
 
     public static void query6() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             List<SalesPerson> salespeopleWithPrefix = manager.createNamedQuery(SalesPerson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, SalesPerson.class)
                     .setParameter("prefix", "s")
@@ -105,7 +105,7 @@ public class Queries {
     }
 
     public static void query7() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             List<SalesPerson> salesPeople = manager.createNamedQuery(SalesPerson.GET_SALESPEOPLE_WITH_NO_PHONE, SalesPerson.class)
                     .getResultList();
@@ -124,7 +124,7 @@ public class Queries {
     // Query 8 ==> native query (create record)
 
     public static void query9() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             List<SalesPerson> salesPeople =
                     manager.createNamedQuery(SalesPerson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, SalesPerson.class)
@@ -150,7 +150,7 @@ public class Queries {
 
 
     public static void query10() {
-        EntityManager manager = Producer.createEntityManager();
+        EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
             Car cheapestCar = manager.createNamedQuery(Car.GET_CHEAPEST_CAR, Car.class)
                     .getSingleResult();
@@ -161,7 +161,7 @@ public class Queries {
             System.out.printf("Model: %s%n", cheapestCar.getModel());
             System.out.println("Its options:");
             for (CarOption option : cheapestCar.getOptions()) {
-                System.out.printf("\tOption name: %10s%n" , option.getId().getOptionName());
+                System.out.printf("\tOption name: %10s%n", option.getId().getOptionName());
                 System.out.printf("\tPrice = %10s%n", option.getPrice());
             }
         } finally {
