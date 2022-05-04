@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8d8fda7-453c-400d-8f31-d5801fe9f925.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8d8fda7-453c-400d-8f31-d5801fe9f925.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_json_jakarta_json_api_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_parsson_parsson_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_yasson_3_0_0_RC2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/college/database/config/EntityManagerProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/config/EntityManagerProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,23 +67,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/cli&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/youssef/code/college/database/CarShowroom",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/college/database/cli" />
@@ -135,6 +138,13 @@
       <workItem from="1651594834017" duration="7879000" />
       <workItem from="1651652833362" duration="768000" />
       <workItem from="1651656768610" duration="184000" />
+      <workItem from="1651675286366" duration="109000" />
+      <workItem from="1651675538170" duration="412000" />
+      <workItem from="1651676089893" duration="12000" />
+      <workItem from="1651676134347" duration="33000" />
+      <workItem from="1651676183882" duration="18000" />
+      <workItem from="1651676307831" duration="481000" />
+      <workItem from="1651676802436" duration="274000" />
     </task>
     <servers />
   </component>
