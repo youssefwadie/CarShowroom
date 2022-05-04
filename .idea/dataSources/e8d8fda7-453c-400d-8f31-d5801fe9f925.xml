@@ -1106,12 +1106,12 @@ payroll|schema||appuser|localhost|UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="334" parent="329" name="Model">
+    <column id="334" parent="329" name="model">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="335" parent="329" name="Manufacturer">
+    <column id="335" parent="329" name="manufacturer">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
@@ -1141,64 +1141,85 @@ payroll|schema||appuser|localhost|UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="341" parent="330" name="fk_optionCar_car1_idx">
+    <foreign-key id="341" parent="330" name="fk_optionCar_car1">
+      <ColNames>car_serial_no</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>serial_no</RefColNames>
+      <RefTableName>car</RefTableName>
+    </foreign-key>
+    <index id="342" parent="330" name="fk_optionCar_car1_idx">
       <ColNames>car_serial_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="342" parent="330" name="PRIMARY">
+    <key id="343" parent="330" name="PRIMARY">
       <ColNames>option_name
 car_serial_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="343" parent="331" name="salesperson_id">
+    <column id="344" parent="331" name="salesperson_id">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="344" parent="331" name="car_serial_no">
-      <DataType>int(11)|0s</DataType>
+    <column id="345" parent="331" name="car_serial_no">
+      <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="345" parent="331" name="date">
+    <column id="346" parent="331" name="date">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="346" parent="331" name="sale_price">
-      <DataType>double unsigned|0s</DataType>
+    <column id="347" parent="331" name="sale_price">
+      <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="347" parent="331" name="fk_sale_salesPerson_idx">
+    <foreign-key id="348" parent="331" name="fk_sale_salesperson">
+      <ColNames>salesperson_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>salesperson</RefTableName>
+    </foreign-key>
+    <foreign-key id="349" parent="331" name="fk_sale_car">
+      <ColNames>car_serial_no</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>serial_no</RefColNames>
+      <RefTableName>car</RefTableName>
+    </foreign-key>
+    <index id="350" parent="331" name="fk_sale_salesPerson_idx">
       <ColNames>salesperson_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="348" parent="331" name="fk_sale_car1_idx">
+    <index id="351" parent="331" name="fk_sale_car1_idx">
       <ColNames>car_serial_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="349" parent="331" name="PRIMARY">
+    <key id="352" parent="331" name="PRIMARY">
       <ColNames>salesperson_id
 car_serial_no</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="350" parent="332" name="id">
+    <column id="353" parent="332" name="id">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="351" parent="332" name="name">
+    <column id="354" parent="332" name="name">
       <DataType>varchar(100)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="352" parent="332" name="phone">
+    <column id="355" parent="332" name="phone">
       <DataType>varchar(14)|0s</DataType>
       <Position>3</Position>
     </column>
-    <key id="353" parent="332" name="PRIMARY">
+    <key id="356" parent="332" name="PRIMARY">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

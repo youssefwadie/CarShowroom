@@ -19,21 +19,21 @@ public class Car implements Serializable {
 
     // All these queries can return multiple values in a different dataset so let's be as generic as we can
     // 1
-    public static final String GET_CAR_BY_MANUFACTURER_AND_MODEL = "getCarByManufacturerAndModel";
+    public static final String GET_CAR_BY_MANUFACTURER_AND_MODEL = "Car.findByManufacturerAndModel";
 
     // 2
-    public static final String GET_CARS_IN_RANGE = "getCarsInRange";
+    public static final String GET_CARS_IN_RANGE = "Car.getCarsInRange";
     // 3
-    public static final String GET_ALL_CARS_SORTED_BY_PRICE = "getAllCarsSorted";
+    public static final String GET_ALL_CARS_SORTED_BY_PRICE = "Car.getAllSorted";
 
     // ?
-    public static final String GET_ALL_CARS = "getAllCars";
+    public static final String GET_ALL_CARS = "Car.getAll";
 
     // 5
-    public static final String GET_ALL_CARS_WITH_THEIR_OPTIONS = "getAllCarsWithTheirOptions";
+    public static final String GET_ALL_CARS_WITH_THEIR_OPTIONS = "Car.getAllWithOptions";
 
     // 10
-    public static final String GET_CHEAPEST_CAR = "getCheapestCar";
+    public static final String GET_CHEAPEST_CAR = "Car.getCheapest";
 
     @Id
     @Column(name = "serial_no")

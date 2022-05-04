@@ -4,7 +4,7 @@ import college.database.config.EntityManagerProducer;
 import college.database.entities.Car;
 import college.database.entities.CarOption;
 import college.database.entities.Sale;
-import college.database.entities.SalesPerson;
+import college.database.entities.Salesperson;
 import jakarta.persistence.EntityManager;
 
 import java.math.BigDecimal;
@@ -91,10 +91,10 @@ public class Queries {
     public static void query6() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
-            List<SalesPerson> salespeopleWithPrefix = manager.createNamedQuery(SalesPerson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, SalesPerson.class)
+            List<Salesperson> salespeopleWithPrefix = manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, Salesperson.class)
                     .setParameter("prefix", "s")
                     .getResultList();
-            for (SalesPerson salesPerson : salespeopleWithPrefix) {
+            for (Salesperson salesPerson : salespeopleWithPrefix) {
                 System.out.printf("Sales Person: %s, phone: %s%n", salesPerson.getName(), salesPerson.getPhone());
             }
         } finally {
@@ -107,9 +107,9 @@ public class Queries {
     public static void query7() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
-            List<SalesPerson> salesPeople = manager.createNamedQuery(SalesPerson.GET_SALESPEOPLE_WITH_NO_PHONE, SalesPerson.class)
+            List<Salesperson> salesPeople = manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_NO_PHONE, Salesperson.class)
                     .getResultList();
-            for (SalesPerson salesPerson : salesPeople) {
+            for (Salesperson salesPerson : salesPeople) {
                 System.out.printf("%s is salesperson with no number%n", salesPerson.getName());
             }
 
@@ -126,10 +126,10 @@ public class Queries {
     public static void query9() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
-            List<SalesPerson> salesPeople =
-                    manager.createNamedQuery(SalesPerson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, SalesPerson.class)
+            List<Salesperson> salesPeople =
+                    manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, Salesperson.class)
                             .getResultList();
-            for (SalesPerson salesPerson : salesPeople) {
+            for (Salesperson salesPerson : salesPeople) {
                 BigDecimal totalPriceOfSales = salesPerson
                         .getSales()
                         .stream()

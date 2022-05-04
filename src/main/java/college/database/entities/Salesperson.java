@@ -8,21 +8,21 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "salesperson")
-@NamedQuery(name = SalesPerson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, query = "SELECT s FROM SalesPerson s WHERE s.name LIKE CONCAT(:prefix, '%')")
-@NamedQuery(name = SalesPerson.GET_SALESPEOPLE_WITH_NO_PHONE, query = "SELECT s FROM SalesPerson s WHERE s.phone IS NULL")
-@NamedQuery(name = SalesPerson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, query = "SELECT s FROM SalesPerson s JOIN FETCH s.sales")
-public class SalesPerson implements Serializable {
+@NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, query = "SELECT s FROM Salesperson s WHERE s.name LIKE CONCAT(:prefix, '%')")
+@NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_NO_PHONE, query = "SELECT s FROM Salesperson s WHERE s.phone IS NULL")
+@NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, query = "SELECT s FROM Salesperson s JOIN FETCH s.sales")
+public class Salesperson implements Serializable {
 
     // All these queries can return multiple values in a different dataset so let's be as generic as we can
 
     // 6
-    public static final String GET_SALESPEOPLE_WITH_NAME_STARTING_WITH = "getSalespeopleWithNameStartingWith";
+    public static final String GET_SALESPEOPLE_WITH_NAME_STARTING_WITH = "Salesperson.getAllByNamePrefix";
 
     // 7
-    public static final String GET_SALESPEOPLE_WITH_NO_PHONE = "getSalespeopleWithNoPhone";
+    public static final String GET_SALESPEOPLE_WITH_NO_PHONE = "Salesperson.getSalespeopleWithNoPhone";
 
     // 9
-    public static final String GET_SALESPEOPLE_WITH_ALL_THEIR_SALES = "getSalesPersonsWithSales";
+    public static final String GET_SALESPEOPLE_WITH_ALL_THEIR_SALES = "Salesperson.getAllWithSales";
 
     @Id
     @Column(name = "id")
