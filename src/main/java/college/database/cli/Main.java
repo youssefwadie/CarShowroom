@@ -44,6 +44,9 @@ public class Main {
                 case 3:
                     Queries.query3();
                     break;
+                case 4:
+                    Queries.query4();
+                    break;
                 case 5:
                     Queries.query5();
                     break;

@@ -6,6 +6,7 @@ import college.database.entities.Car;
 import college.database.entities.CarOption;
 import college.database.entities.Sale;
 import college.database.entities.Salesperson;
+import college.database.report.Report1;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.RollbackException;
@@ -56,7 +57,7 @@ public class Queries {
     public static void query3() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
-            BigDecimal interest = new BigDecimal(1.07d);
+            BigDecimal interest = BigDecimal.valueOf(1.07d);
 
             List<Car> cars = manager.createNamedQuery(Car.GET_ALL_CARS_SORTED_BY_PRICE, Car.class).getResultList();
             for (Car car : cars) {
@@ -70,7 +71,23 @@ public class Queries {
         }
     }
 
-    // Query 4 ==> native query (create record)
+    public static void query4() {
+        EntityManager manager = EntityManagerProducer.createEntityManager();
+
+        try {
+            List<Report1> report1Details = manager.createNamedQuery(Car.GET_CARS_DETAILS, Report1.class)
+                    .getResultList();
+
+            for (Report1 report : report1Details) {
+                System.out.println(report);
+            }
+        } finally {
+            if (manager != null) {
+                manager.close();
+            }
+        }
+
+    }
 
 
     public static void query5() {
