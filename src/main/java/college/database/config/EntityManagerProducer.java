@@ -17,6 +17,7 @@ public class EntityManagerProducer {
             this.factory = Persistence.createEntityManagerFactory("CarShowroomPU");
         } catch (PersistenceException e) {
             System.err.println(e.getMessage());
+            e.printStackTrace();
             System.exit(1);
         }
     }

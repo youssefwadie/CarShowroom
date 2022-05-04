@@ -1,22 +1,24 @@
 package college.database.service;
 
-import college.database.cli.Colors;
 import college.database.config.EntityManagerProducer;
 import college.database.entities.Car;
 import college.database.entities.CarOption;
 import college.database.entities.Sale;
 import college.database.entities.Salesperson;
-import college.database.report.Report1;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.RollbackException;
 
 import java.math.BigDecimal;
-import java.sql.Date;
-import java.time.LocalDate;
+import java.util.Collections;
 import java.util.List;
 
 public class Queries {
+
+    private final static int windowWidth = 50;
+
+    // For java 11+, use " ".repeat(X)
+    private final static String separator = String.join("", Collections.nCopies(windowWidth, "="));
+
+
     public static void query1() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
@@ -75,12 +77,37 @@ public class Queries {
         EntityManager manager = EntityManagerProducer.createEntityManager();
 
         try {
-            List<Report1> report1Details = manager.createNamedQuery(Car.GET_CARS_DETAILS, Report1.class)
+            List<Car> cars = manager
+                    .createNamedQuery(Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, Car.class)
                     .getResultList();
 
-            for (Report1 report : report1Details) {
-                System.out.println(report);
+            System.out.println(Queries.separator);
+            System.out.println(centerString("Report 1"));
+            System.out.println(Queries.separator);
+
+            for (Car car : cars) {
+                BigDecimal totalPrice = car.getPrice();
+                String carModel = String.format("Car's model: %s", car.getModel());
+                String carManufacturer = String.format("Car's manufacturer: %s", car.getManufacturer());
+                String carPrice = String.format("Car's price: %.2f", car.getPrice());
+                System.out.println(centerString(carModel));
+                System.out.println(centerString(carManufacturer));
+                System.out.println(centerString(carPrice));
+                if (car.getOptions().size() != 0) {
+                    System.out.println(centerString("Options"));
+                    for (CarOption option : car.getOptions()) {
+                        String optionName = String.format("Option name: %s", option.getId().getOptionName());
+                        String optionPrice = String.format("Option price: %.2f", option.getPrice());
+                        totalPrice = totalPrice.add(option.getPrice());
+                        System.out.println(centerString(optionName));
+                        System.out.println(centerString(optionPrice));
+                    }
+                }
+                System.out.println(centerString(String.format("Total price: %.2f", totalPrice)));
+
+                System.out.println(separator);
             }
+
         } finally {
             if (manager != null) {
                 manager.close();
@@ -141,27 +168,25 @@ public class Queries {
         }
     }
 
-    public static boolean createRecord2() {
-        //        String dropOldView = "DROP VIEW IF EXISTS report2";
-        String createViewQuery = "CREATE VIEW IF NOT EXISTS report2 AS " +
-                "SELECT c.model, c.price, sp.name, s.date, s.sale_price " +
-                "FROM car c JOIN sale s ON c.serial_no = s.car_serial_no " +
-                "JOIN salesperson sp ON sp.id = s.salesperson_id";
-
+    public static void query8() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
         try {
-            EntityTransaction transaction = manager.getTransaction();
-            try {
-                transaction.begin();
-//                manager.createNativeQuery(dropOldView).executeUpdate();
-                manager.createNativeQuery(createViewQuery).executeUpdate();
-                transaction.commit();
-                return true;
-
-            } catch (RollbackException e) {
-                System.out.printf("%sFailed to create the view: %s%s%n", Colors.ANSI_RED, e.getMessage(), Colors.ANSI_RESET);
-                transaction.rollback();
-                return false;
+            List<Sale> sales = manager.createNamedQuery(Sale.GET_ALL_SALES, Sale.class).getResultList();
+            System.out.println(Queries.separator);
+            System.out.println(centerString("Report 2"));
+            System.out.println(Queries.separator);
+            for (Sale sale : sales) {
+                String[] lines = new String[]{
+                        String.format("Car model: %s", sale.getCar().getModel()),
+                        String.format("Car price: %.2f", sale.getCar().getPrice()),
+                        String.format("Salesperson's name: %s", sale.getSalesperson().getName()),
+                        String.format("Sales date: %s", sale.getSoldDate().toString()),
+                        String.format("Sale price: %.2f", sale.getSalePrice()),
+                        Queries.separator
+                };
+                for (String line : lines) {
+                    System.out.println(centerString(line));
+                }
             }
         } finally {
             if (manager != null) {
@@ -170,31 +195,15 @@ public class Queries {
         }
     }
 
-
-    // TODO: print the rest of data
-    public static void queryRecord2() {
-        EntityManager manager = EntityManagerProducer.createEntityManager();
-
-        try {
-            List<Object[]> resultList = manager
-                    .createNativeQuery("SELECT * FROM report2")
-                    .getResultList();
-            for (Object[] result : resultList) {
-                String model = (String) result[0];
-                BigDecimal price = BigDecimal.valueOf((Double) result[1]);
-                String salespersonName = (String) result[2];
-                LocalDate saleDate = ((Date) result[3]).toLocalDate();
-                BigDecimal salePrice = BigDecimal.valueOf((Double) result[4]);
-
-                System.out.printf("Model: %s, price = %.2f %n", model, price);
-            }
-        } finally {
-            if (manager != null) {
-                manager.close();
-            }
+    private static String centerString(String stringToBeCentered) {
+        if (windowWidth > stringToBeCentered.length()) {
+            String padding = String.join("",
+                    Collections.nCopies((windowWidth - stringToBeCentered.length()) / 2, " "));
+            return padding + stringToBeCentered;
         }
-    }
 
+        return stringToBeCentered;
+    }
 
     public static void query9() {
         EntityManager manager = EntityManagerProducer.createEntityManager();

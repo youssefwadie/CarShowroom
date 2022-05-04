@@ -14,7 +14,6 @@ import java.util.Collection;
 @NamedQuery(name = Car.GET_CARS_IN_RANGE, query = "SELECT c FROM Car c WHERE c.price BETWEEN :minPrice AND :maxPrice")
 @NamedQuery(name = Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, query = "SELECT c FROM Car c JOIN FETCH c.options")
 @NamedQuery(name = Car.GET_CHEAPEST_CAR, query = "SELECT c FROM Car c JOIN FETCH c.options WHERE c.price = (SELECT MIN(c.price) FROM Car c)")
-@NamedQuery(name = Car.GET_CARS_DETAILS, query = "SELECT new college.database.report.Report1(c) FROM Car c")
 public class Car implements Serializable {
 
     // All these queries can return multiple values in a different dataset so let's be as generic as we can
@@ -26,8 +25,7 @@ public class Car implements Serializable {
     // 3
     public static final String GET_ALL_CARS_SORTED_BY_PRICE = "Car.getAllSorted";
 
-    // 4
-    public static final String GET_CARS_DETAILS = "Car.getCarsDetails";
+    // 4...
 
     // 5
     public static final String GET_ALL_CARS_WITH_THEIR_OPTIONS = "Car.getAllWithOptions";

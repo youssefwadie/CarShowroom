@@ -33,7 +33,6 @@ public class Main {
                 EntityManagerProducer.closeEntityManagerFactory();
                 continue;
             }
-            System.out.println("================= Query result ==========================");
             switch (choice) {
                 case 1:
                     Queries.query1();
@@ -57,17 +56,7 @@ public class Main {
                     Queries.query7();
                     break;
                 case 8:
-                    boolean created = Queries.createRecord2();
-                    if (created) {
-                        System.out.printf("%sThe view has been created.%s%n", Colors.ANSI_GREEN, Colors.ANSI_RESET);
-                        System.out.printf("%sQuery the view? [Y/n] %s", Colors.ANSI_CYAN, Colors.ANSI_RESET);
-                        String line = scanner.nextLine();
-                        if (line.length() == 0 || line.matches("\\s+|[yY]")) {
-                            Queries.queryRecord2();
-                        }
-                    } else {
-                        System.out.printf("%sFailed to create the view..%s%n", Colors.ANSI_RED, Colors.ANSI_RESET);
-                    }
+                    Queries.query8();
                     break;
                 case 9:
                     Queries.query9();
@@ -78,7 +67,6 @@ public class Main {
                 default:
                     System.out.printf("%sNot implemented yet!%s%n", Colors.ANSI_RED, Colors.ANSI_RESET);
             }
-            System.out.println("=========================================================");
 
         } while (choice != -1);
 
