@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.PersistenceException;
+import jakarta.transaction.Transaction;
 
 public class EntityManagerProducer {
     private EntityManagerFactory factory;

@@ -9,7 +9,7 @@ import java.util.Collection;
 @Entity
 @Table(name = "salesperson")
 @NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, query = "SELECT s FROM Salesperson s WHERE s.name LIKE CONCAT(:prefix, '%')")
-@NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_NO_PHONE, query = "SELECT s FROM Salesperson s WHERE s.phone IS NULL")
+@NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_NO_PHONE, query = "SELECT s FROM Salesperson s WHERE s.phone = ''")
 @NamedQuery(name = Salesperson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, query = "SELECT s FROM Salesperson s JOIN FETCH s.sales")
 public class Salesperson implements Serializable {
 

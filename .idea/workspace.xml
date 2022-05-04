@@ -5,15 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b09b0955-bd1f-4a11-bd1a-e129b8c2b66b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e8d8fda7-453c-400d-8f31-d5801fe9f925.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e8d8fda7-453c-400d-8f31-d5801fe9f925.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/config/EntityManagerProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/config/EntityManagerProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,5 +161,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

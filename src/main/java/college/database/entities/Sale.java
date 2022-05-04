@@ -4,11 +4,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import org.hibernate.annotations.Columns;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "sale")
@@ -17,7 +16,7 @@ public class Sale implements Serializable {
     private SaleId id;
 
     @Column(name = "date")
-    private Date soldDate;
+    private LocalDate soldDate;
 
     @Column(name = "sale_price")
     private BigDecimal salePrice;
@@ -31,11 +30,11 @@ public class Sale implements Serializable {
         this.id = id;
     }
 
-    public Date getSoldDate() {
+    public LocalDate getSoldDate() {
         return soldDate;
     }
 
-    public void setSoldDate(Date soldDate) {
+    public void setSoldDate(LocalDate soldDate) {
         this.soldDate = soldDate;
     }
 

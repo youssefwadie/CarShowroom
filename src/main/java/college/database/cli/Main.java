@@ -2,7 +2,6 @@ package college.database.cli;
 
 import college.database.config.EntityManagerProducer;
 import college.database.service.Queries;
-import jakarta.persistence.PersistenceException;
 
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -54,6 +53,19 @@ public class Main {
                 case 7:
                     Queries.query7();
                     break;
+                case 8:
+                    boolean created = Queries.createRecord2();
+                    if (created) {
+                        System.out.printf("%sThe view has been created.%s%n", Colors.ANSI_GREEN, Colors.ANSI_RESET);
+                        System.out.printf("%sQuery the view? [Y/n] %s", Colors.ANSI_CYAN, Colors.ANSI_RESET);
+                        String line = scanner.nextLine();
+                        if (line.length() == 0 || line.matches("\\s+|[yY]")) {
+                            Queries.queryRecord2();
+                        }
+                    } else {
+                        System.out.printf("%sFailed to create the view..%s%n", Colors.ANSI_RED, Colors.ANSI_RESET);
+                    }
+                    break;
                 case 9:
                     Queries.query9();
                     break;
@@ -71,30 +83,32 @@ public class Main {
     }
 
     private static void printMenu() {
-        System.out.printf("%s1. Display the serial number and the price of the Toyota corolla.%s%n",
+        System.out.printf("%s1.  Display the serial number and the price of the Toyota corolla.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        System.out.printf("%s2. Retrieve a model and price of each car whose has price between 150000 and 250000.%s%n",
+        System.out.printf("%s2.  Retrieve a model and price of each car whose has price between 150000 and 250000.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        System.out.printf("%s3. Retrieve a model, price, and price after adding 7%% interest of all cars ordered from " +
+        System.out.printf("%s3.  Retrieve a model, price, and price after adding 7%% interest of all cars ordered from " +
                         "the most expensive car to the cheapest car.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
         // =============================== 4 ===============================
 
-        System.out.printf("%s5. For each car model, display the total prices of its options.%s%n",
+        System.out.printf("%s5.  For each car model, display the total prices of its options.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        System.out.printf("%s6. Retrieve the name and phone of salesperson whose name start with “s”.%s%n",
+        System.out.printf("%s6.  Retrieve the name and phone of salesperson whose name start with “s”.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        System.out.printf("%s7. Retrieve the name of salesperson who has no phone.%s%n",
+        System.out.printf("%s7.  Retrieve the name of salesperson who has no phone.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        // =============================== 8 ===============================
+        System.out.printf("%s8.  Make a report named report2 (view) that contains each car sales details " +
+                        "(car model, car price, salesperson name, sales date, and sales price)%s%n",
+                Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        System.out.printf("%s9. For each salesperson, display the number of cars that he sold and summation of their prices.%s%n",
+        System.out.printf("%s9.  For each salesperson, display the number of cars that he sold and summation of their prices.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
         System.out.printf("%s10. Display the details of the cheapest car(s).%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);

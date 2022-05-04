@@ -1,13 +1,18 @@
 package college.database.service;
 
+import college.database.cli.Colors;
 import college.database.config.EntityManagerProducer;
 import college.database.entities.Car;
 import college.database.entities.CarOption;
 import college.database.entities.Sale;
 import college.database.entities.Salesperson;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.RollbackException;
 
 import java.math.BigDecimal;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Queries {
@@ -78,8 +83,7 @@ public class Queries {
                 for (CarOption option : car.getOptions()) {
                     optionsPrice = optionsPrice.add(option.getPrice());
                 }
-                System.out.printf("Car's model = %s%n", car.getModel());
-                System.out.printf("Its options price = %.2f%n", optionsPrice);
+                System.out.printf("Car's model = %s, its options price = %.2f%n", car.getModel(), optionsPrice);
             }
         } finally {
             if (manager != null) {
@@ -120,8 +124,60 @@ public class Queries {
         }
     }
 
+    public static boolean createRecord2() {
+        //        String dropOldView = "DROP VIEW IF EXISTS report2";
+        String createViewQuery = "CREATE VIEW IF NOT EXISTS report2 AS " +
+                "SELECT c.model, c.price, sp.name, s.date, s.sale_price " +
+                "FROM car c JOIN sale s ON c.serial_no = s.car_serial_no " +
+                "JOIN salesperson sp ON sp.id = s.salesperson_id";
 
-    // Query 8 ==> native query (create record)
+        EntityManager manager = EntityManagerProducer.createEntityManager();
+        try {
+            EntityTransaction transaction = manager.getTransaction();
+            try {
+                transaction.begin();
+//                manager.createNativeQuery(dropOldView).executeUpdate();
+                manager.createNativeQuery(createViewQuery).executeUpdate();
+                transaction.commit();
+                return true;
+
+            } catch (RollbackException e) {
+                System.out.printf("%sFailed to create the view: %s%s%n", Colors.ANSI_RED, e.getMessage(), Colors.ANSI_RESET);
+                transaction.rollback();
+                return false;
+            }
+        } finally {
+            if (manager != null) {
+                manager.close();
+            }
+        }
+    }
+
+
+    // TODO: print the rest of data
+    public static void queryRecord2() {
+        EntityManager manager = EntityManagerProducer.createEntityManager();
+
+        try {
+            List<Object[]> resultList = manager
+                    .createNativeQuery("SELECT * FROM report2")
+                    .getResultList();
+            for (Object[] result : resultList) {
+                String model = (String) result[0];
+                BigDecimal price = BigDecimal.valueOf((Double) result[1]);
+                String salespersonName = (String) result[2];
+                LocalDate saleDate = ((Date) result[3]).toLocalDate();
+                BigDecimal salePrice = BigDecimal.valueOf((Double) result[4]);
+
+                System.out.printf("Model: %s, price = %.2f %n", model, price);
+            }
+        } finally {
+            if (manager != null) {
+                manager.close();
+            }
+        }
+    }
+
 
     public static void query9() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
