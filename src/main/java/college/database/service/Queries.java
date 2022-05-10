@@ -5,7 +5,7 @@ import college.database.entities.Car;
 import college.database.entities.CarOption;
 import college.database.entities.Sale;
 import college.database.entities.Salesperson;
-import jakarta.persistence.EntityManager;
+import javax.persistence.EntityManager;
 
 import java.math.BigDecimal;
 import java.util.Collections;

@@ -1,10 +1,10 @@
 package college.database.entities;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.sql.Date;
 
 @Entity
 @Table(name = "sale")
@@ -15,7 +15,7 @@ public class Sale implements Serializable {
     @EmbeddedId
     private SaleId id;
     @Column(name = "date")
-    private LocalDate soldDate;
+    private Date soldDate;
 
     @Column(name = "sale_price")
     private BigDecimal salePrice;
@@ -36,11 +36,11 @@ public class Sale implements Serializable {
         this.id = id;
     }
 
-    public LocalDate getSoldDate() {
+    public Date getSoldDate() {
         return soldDate;
     }
 
-    public void setSoldDate(LocalDate soldDate) {
+    public void setSoldDate(Date soldDate) {
         this.soldDate = soldDate;
     }
 

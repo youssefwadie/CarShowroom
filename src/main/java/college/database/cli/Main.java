@@ -4,18 +4,15 @@ import college.database.config.EntityManagerProducer;
 import college.database.service.Queries;
 
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-// TODO: query 4 and 8 (views)
 public class Main {
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         // change all logging levels to error level
-        Logger logger = Logger.getLogger("");
-        logger.setLevel(Level.SEVERE);
+//        Logger logger = Logger.getLogger("");
+//        logger.setLevel(Level.SEVERE);
         try {
             System.out.printf("%sSetup the database connection, please wait...%s%n", Colors.ANSI_GREEN, Colors.ANSI_RESET);
             Class.forName(EntityManagerProducer.class.getName());
@@ -27,7 +24,7 @@ public class Main {
         int choice = 0;
         do {
             printMenu();
-            choice = handleInput(1, 10);
+            choice = handleInput();
             if (choice == -1) {
                 System.out.printf("%sTerminating....%s%n", Colors.ANSI_GREEN, Colors.ANSI_RESET);
                 EntityManagerProducer.closeEntityManagerFactory();
@@ -107,15 +104,15 @@ public class Main {
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
     }
 
-    private static int handleInput(int min, int max) {
+    private static int handleInput() {
         while (true) {
-            System.out.printf("%s[%d-%d] or quit: %s", Colors.ANSI_CYAN, min, max, Colors.ANSI_RESET);
+            System.out.printf("%s[%d-%d] or quit: %s", Colors.ANSI_CYAN, 1, 10, Colors.ANSI_RESET);
             String input = scanner.nextLine();
             if (input.matches("-?\\d+")) {
 
                 try {
                     int number = Integer.parseInt(input);
-                    if (number < min || number > max) {
+                    if (number < 1 || number > 10) {
                         System.out.printf("%sOut of range: %d%s%n", Colors.ANSI_RED, number, Colors.ANSI_RESET);
                     } else {
                         return number;
