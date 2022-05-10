@@ -81,7 +81,10 @@ public class Main {
                         "the most expensive car to the cheapest car.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
 
-        // =============================== 4 ===============================
+        System.out.printf("%s4. Make a report named report1 (view) that contains car model, car manufacturer, car price, option\n" +
+                        "name, option price and the total price of the car with each of its option.%s%n",
+                Colors.ANSI_PURPLE, Colors.ANSI_RESET);
+
 
         System.out.printf("%s5.  For each car model, display the total prices of its options.%s%n",
                 Colors.ANSI_PURPLE, Colors.ANSI_RESET);
