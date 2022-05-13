@@ -113,7 +113,7 @@ START TRANSACTION;
 USE `car_showroom`;
 INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('11223344', 'Civic', 'Honda', 250000);
 INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('11223345', 'City', 'Honda', 150000);
-INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('44556677', 'Lancer', 'Mitsubishi ', 130000);
+INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('44556677', 'Lancer', 'Mitsubishi', 130000);
 INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('44556678', 'Shark', 'Mitsubishi', 170000);
 INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('22113344', 'Corolla', 'Toyota', 200000);
 INSERT INTO `car_showroom`.`car` (`serial_no`, `model`, `manufacturer`, `price`) VALUES ('77886655', 'C200', 'Mercedes', 500000);
@@ -132,7 +132,7 @@ INSERT INTO `car_showroom`.`sale` (`salesperson_id`, `car_serial_no`, `date`, `s
 INSERT INTO `car_showroom`.`sale` (`salesperson_id`, `car_serial_no`, `date`, `sale_price`) VALUES ('MN1212', '44556678', '2015-11-02', 200750);
 INSERT INTO `car_showroom`.`sale` (`salesperson_id`, `car_serial_no`, `date`, `sale_price`) VALUES ('VH7766', '44556678', '2015-01-07', 170000);
 INSERT INTO `car_showroom`.`sale` (`salesperson_id`, `car_serial_no`, `date`, `sale_price`) VALUES ('AH8877', '77886655', '2015-03-09', 506500);
-INSERT INTO `car_showroom`.`sale` (`salesperson_id`, `car_serial_no`, `date`, `sale_price`) VALUES ('MN1212', '77886655', ' 2015-03-09', 506500);
+INSERT INTO `car_showroom`.`sale` (`salesperson_id`, `car_serial_no`, `date`, `sale_price`) VALUES ('MN1212', '77886655', '2015-03-09', 506500);
 
 COMMIT;
 

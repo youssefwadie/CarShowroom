@@ -26,10 +26,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/3.0.0/jakarta.persistence-api-3.0.0-sources.jar!/jakarta/persistence/Basic.java" root0="SKIP_INSPECTION" />
-    <setting file="jar:///usr/lib/jvm/java-17-temurin/lib/src.zip!/java.base/java/lang/ClassLoader.java" root0="SKIP_INSPECTION" />
-  </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
@@ -68,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/youssef/code/college/database/CarShowroom",
+    "last_opened_file_path": "D:/CarShowroom",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +77,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mariadb"
+      "mariadb",
+      "mysql"
     ]
   }
 }]]></component>
@@ -146,6 +143,8 @@
       <workItem from="1651693893053" duration="3439000" />
       <workItem from="1651741838497" duration="52000" />
       <workItem from="1652173880034" duration="1907000" />
+      <workItem from="1652458174488" duration="210000" />
+      <workItem from="1652458394800" duration="10362000" />
     </task>
     <servers />
   </component>

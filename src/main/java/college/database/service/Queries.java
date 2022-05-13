@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Queries {
 
-    private final static int windowWidth = 50;
+    private final static int windowWidth = 80;
 
     // For java 11+, use " ".repeat(X)
     private final static String separator = String.join("", Collections.nCopies(windowWidth, "="));
@@ -26,10 +26,12 @@ public class Queries {
                     .setParameter("manufacturer", "Toyota")
                     .setParameter("model", "Corolla")
                     .getSingleResult();
-
-            System.out.printf("%s %s's serial number is %s, and its price = %s%n",
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 1") + "\n");
+            System.out.printf("\t%s %s's serial number is %s, and its price = %s%n",
                     toyotaCorolla.getManufacturer(), toyotaCorolla.getModel(),
                     toyotaCorolla.getSerialNumber(), toyotaCorolla.getPrice().toString());
+            System.out.println("\n"+ Queries.separator);
 
         } finally {
             if (manager != null) {
@@ -45,10 +47,13 @@ public class Queries {
                     .setParameter("minPrice", 150000)
                     .setParameter("maxPrice", 250000)
                     .getResultList();
-
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 2") + "\n");
             for (Car car : carsBetween) {
-                System.out.printf("Car's model is %s and its price = %.2f%n", car.getModel(), car.getPrice());
+
+                System.out.printf("\tCar's model is %s and its price = %.2f%n", car.getModel(), car.getPrice());
             }
+            System.out.println(Queries.separator);
         } finally {
             if (manager != null) {
                 manager.close();
@@ -62,10 +67,14 @@ public class Queries {
             BigDecimal interest = BigDecimal.valueOf(1.07d);
 
             List<Car> cars = manager.createNamedQuery(Car.GET_ALL_CARS_SORTED_BY_PRICE, Car.class).getResultList();
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 3") + "\n");
             for (Car car : cars) {
-                System.out.printf("Car's model = %s, price = %.2f, and price after adding interest = %.2f%n"
-                        , car.getModel(), car.getPrice(), car.getPrice().multiply(interest));
+
+                System.out.printf("\tCar's model = %s, price = %.2f, and price after adding interest = %.2f%n"
+                        ,car.getModel(), car.getPrice(), car.getPrice().multiply(interest));
             }
+            System.out.println("\n"+Queries.separator);
         } finally {
             if (manager != null) {
                 manager.close();
@@ -122,13 +131,16 @@ public class Queries {
         try {
             List<Car> cars = manager.createNamedQuery(Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, Car.class)
                     .getResultList();
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 5") + "\n");
             for (Car car : cars) {
                 BigDecimal optionsPrice = BigDecimal.ZERO;
                 for (CarOption option : car.getOptions()) {
                     optionsPrice = optionsPrice.add(option.getPrice());
                 }
-                System.out.printf("Car's model = %s, its options price = %.2f%n", car.getModel(), optionsPrice);
+                System.out.printf("\tCar's model = %s, its options price = %.2f%n", car.getModel(), optionsPrice);
             }
+            System.out.println(Queries.separator);
         } finally {
             if (manager != null) {
                 manager.close();
@@ -142,9 +154,12 @@ public class Queries {
             List<Salesperson> salespeopleWithPrefix = manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_NAME_STARTING_WITH, Salesperson.class)
                     .setParameter("prefix", "s")
                     .getResultList();
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 6") + "\n");
             for (Salesperson salesPerson : salespeopleWithPrefix) {
-                System.out.printf("Sales Person: %s, phone: %s%n", salesPerson.getName(), salesPerson.getPhone());
+                System.out.printf("\tSales Person: %s, phone: %s%n", salesPerson.getName(), salesPerson.getPhone());
             }
+            System.out.println(Queries.separator);
         } finally {
             if (manager != null) {
                 manager.close();
@@ -157,10 +172,12 @@ public class Queries {
         try {
             List<Salesperson> salesPeople = manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_NO_PHONE, Salesperson.class)
                     .getResultList();
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 7") + "\n");
             for (Salesperson salesPerson : salesPeople) {
-                System.out.printf("%s is salesperson with no number%n", salesPerson.getName());
+                System.out.printf("\t%s is salesperson with no number%n", salesPerson.getName());
             }
-
+            System.out.println(Queries.separator);
         } finally {
             if (manager != null) {
                 manager.close();
@@ -207,21 +224,29 @@ public class Queries {
 
     public static void query9() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
+        String temp = " ";
         try {
             List<Salesperson> salesPeople =
                     manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, Salesperson.class)
                             .getResultList();
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 9") + "\n");
             for (Salesperson salesPerson : salesPeople) {
+                String curTemp = "";
                 BigDecimal totalPriceOfSales = salesPerson
                         .getSales()
                         .stream()
                         .map(Sale::getSalePrice)
                         .reduce(BigDecimal.ZERO, BigDecimal::add);
-
-                System.out.printf("%s sold %d cars, with total price = %.2f%n",
-                        salesPerson.getName(), salesPerson.getSales().size()
-                        , totalPriceOfSales);
+                curTemp += salesPerson.getName() + salesPerson.getSales().size() +""+ totalPriceOfSales+"";
+                if (!curTemp.equals(temp)) {
+                    System.out.printf("\t%s sold %d cars, with total price = %.2f%n",
+                            salesPerson.getName(), salesPerson.getSales().size()
+                            , totalPriceOfSales);
+                    temp = curTemp;
+                }
             }
+            System.out.println(Queries.separator);
 
         } finally {
             if (manager != null) {
@@ -236,31 +261,22 @@ public class Queries {
         try {
             Car cheapestCar = manager.createNamedQuery(Car.GET_CHEAPEST_CAR, Car.class)
                     .getSingleResult();
-
-            System.out.println("Cheapest car");
-            System.out.printf("Serial Number: %s%n", cheapestCar.getSerialNumber());
-            System.out.printf("Manufacturer: %s%n", cheapestCar.getManufacturer());
-            System.out.printf("Model: %s%n", cheapestCar.getModel());
+            System.out.println(Queries.separator);
+            System.out.println(centerString("\tQuery 10") + "\n");
+            System.out.println("Cheapest car:");
+            System.out.printf("\tSerial Number: %s%n", cheapestCar.getSerialNumber());
+            System.out.printf("\tManufacturer: %s%n", cheapestCar.getManufacturer());
+            System.out.printf("\tModel: %s%n", cheapestCar.getModel());
             System.out.println("Its options:");
             for (CarOption option : cheapestCar.getOptions()) {
                 System.out.printf("\tOption name: %10s%n", option.getId().getOptionName());
                 System.out.printf("\tPrice = %10s%n", option.getPrice());
             }
+            System.out.println(Queries.separator);
         } finally {
             if (manager != null) {
                 manager.close();
             }
         }
     }
-
-//    public static void queryX() {
-//        EntityManager manager = Producer.createEntityManager();
-//        try {
-//
-//        } finally {
-//            if (manager != null) {
-//                manager.close();
-//            }
-//        }
-//    }
 }

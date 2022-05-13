@@ -39,10 +39,10 @@ public class Car implements Serializable {
     @Column(name = "serial_no")
     private String serialNumber;
 
-    @Column(name = "model")
+    @Column(name = "Model")
     private String model;
 
-    @Column(name = "manufacturer")
+    @Column(name = "Manufacturer")
     private String manufacturer;
 
     @Column(name = "price")

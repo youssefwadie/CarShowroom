@@ -17,15 +17,15 @@ public class Sale implements Serializable {
     @Column(name = "date")
     private Date soldDate;
 
-    @Column(name = "sale_price")
+    @Column(name = "SalePrice")
     private BigDecimal salePrice;
 
     @ManyToOne
-    @JoinColumn(name = "car_serial_no", referencedColumnName = "serial_no", updatable = false, insertable = false)
+    @JoinColumn(name = "car_serial_no", referencedColumnName = "Serial_no", updatable = false, insertable = false)
     private Car car;
 
     @ManyToOne
-    @JoinColumn(name = "salesperson_id", referencedColumnName = "id", updatable = false, insertable = false)
+    @JoinColumn(name = "sale_person_id", referencedColumnName = "id", updatable = false, insertable = false)
     private Salesperson salesperson;
 
     public SaleId getId() {
