@@ -33,7 +33,7 @@ Prerequisites
 2. [Maven build system](https://maven.apache.org/)
 3. DBMS; you can use any SQL implementation, but you'll have to change
    the [JDBC url](/src/main/resources/META-INF/persistence.xml#L11), and
-   the [provider](/src/main/resources/META-INF/persistence.xml#L7) and install the appropriate `JDBC` driver in
+   the [driver](/src/main/resources/META-INF/persistence.xml#L10) and install the appropriate `JDBC` driver in
    the [pom](pom.xml#L11)
 
 ---
