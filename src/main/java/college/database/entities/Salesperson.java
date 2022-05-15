@@ -30,7 +30,7 @@ public class Salesperson implements Serializable {
     @Column(name = "id")
     private String id;
 
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
 
     @Column(name = "phone")
