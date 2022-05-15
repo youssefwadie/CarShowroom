@@ -10,9 +10,6 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // change all logging levels to error level
-//        Logger logger = Logger.getLogger("");
-//        logger.setLevel(Level.SEVERE);
         try {
             System.out.printf("%sSetup the database connection, please wait...%s%n", Colors.ANSI_GREEN, Colors.ANSI_RESET);
             Class.forName(EntityManagerProducer.class.getName());

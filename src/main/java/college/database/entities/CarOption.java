@@ -3,10 +3,9 @@ package college.database.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 @Entity
-@Table(name = "car_option")
+@Table(name = "cars_options")
 public class CarOption implements Serializable {
 
     @EmbeddedId
@@ -17,7 +16,7 @@ public class CarOption implements Serializable {
     private Car car;
     
     @Column(name = "price")
-    private BigDecimal price;
+    private Double price;
 
     public CarOptionId getId() {
         return id;
@@ -27,11 +26,11 @@ public class CarOption implements Serializable {
         this.id = id;
     }
 
-    public BigDecimal getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

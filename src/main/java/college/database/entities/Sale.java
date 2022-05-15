@@ -3,11 +3,10 @@ package college.database.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.sql.Date;
 
 @Entity
-@Table(name = "sale")
+@Table(name = "sales")
 @NamedQuery(name = Sale.GET_ALL_SALES, query = "SELECT s FROM Sale s")
 public class Sale implements Serializable {
 
@@ -18,7 +17,7 @@ public class Sale implements Serializable {
     private Date soldDate;
 
     @Column(name = "sale_price")
-    private BigDecimal salePrice;
+    private Double salePrice;
 
     @ManyToOne
     @JoinColumn(name = "car_serial_no", referencedColumnName = "serial_no", updatable = false, insertable = false)
@@ -44,11 +43,11 @@ public class Sale implements Serializable {
         this.soldDate = soldDate;
     }
 
-    public BigDecimal getSalePrice() {
+    public Double getSalePrice() {
         return salePrice;
     }
 
-    public void setSalePrice(BigDecimal salePrice) {
+    public void setSalePrice(Double salePrice) {
         this.salePrice = salePrice;
     }
 

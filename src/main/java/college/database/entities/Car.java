@@ -3,18 +3,16 @@ package college.database.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
-@Table(name = "car")
+@Table(name = "cars")
 @NamedQueries({
         @NamedQuery(name = Car.GET_ALL_CARS_SORTED_BY_PRICE, query = "SELECT c FROM Car c ORDER BY c.price DESC"),
         @NamedQuery(name = Car.GET_CAR_BY_MANUFACTURER_AND_MODEL, query = "SELECT c FROM Car c WHERE c.model = :model AND c.manufacturer = :manufacturer"),
         @NamedQuery(name = Car.GET_CARS_IN_RANGE, query = "SELECT c FROM Car c WHERE c.price BETWEEN :minPrice AND :maxPrice"),
-        @NamedQuery(name = Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, query = "SELECT c FROM Car c JOIN FETCH c.options"),
-        @NamedQuery(name = Car.GET_CHEAPEST_CAR, query = "SELECT c FROM Car c JOIN FETCH c.options WHERE c.price = (SELECT MIN(c.price) FROM Car c)")
+        @NamedQuery(name = Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, query = "SELECT DISTINCT c FROM Car c LEFT JOIN FETCH c.options"),
 })
 public class Car implements Serializable {
 
@@ -23,17 +21,14 @@ public class Car implements Serializable {
     public static final String GET_CAR_BY_MANUFACTURER_AND_MODEL = "Car.findByManufacturerAndModel";
 
     // 2
-    public static final String GET_CARS_IN_RANGE = "Car.getCarsInRange";
+    public static final String GET_CARS_IN_RANGE = "Car.findCarsWithPriceInRange";
     // 3
-    public static final String GET_ALL_CARS_SORTED_BY_PRICE = "Car.getAllSorted";
+    public static final String GET_ALL_CARS_SORTED_BY_PRICE = "Car.findAllSorted";
 
     // 4...
 
     // 5
-    public static final String GET_ALL_CARS_WITH_THEIR_OPTIONS = "Car.getAllWithOptions";
-
-    // 10
-    public static final String GET_CHEAPEST_CAR = "Car.getCheapest";
+    public static final String GET_ALL_CARS_WITH_THEIR_OPTIONS = "Car.findAllWithOptions";
 
     @Id
     @Column(name = "serial_no")
@@ -46,7 +41,7 @@ public class Car implements Serializable {
     private String manufacturer;
 
     @Column(name = "price")
-    private BigDecimal price;
+    private Double price;
 
     @OneToMany(mappedBy = "car")
     Collection<CarOption> options = new ArrayList<>();
@@ -75,11 +70,11 @@ public class Car implements Serializable {
         this.manufacturer = manufacturer;
     }
 
-    public BigDecimal getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
