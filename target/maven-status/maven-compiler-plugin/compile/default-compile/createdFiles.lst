@@ -1,0 +1,10 @@
+college/database/entities/Car.class
+college/database/entities/CarOptionId.class
+college/database/cli/Colors.class
+college/database/config/EntityManagerProducer.class
+college/database/entities/SaleId.class
+college/database/service/Queries.class
+college/database/entities/Sale.class
+college/database/entities/CarOption.class
+college/database/cli/Main.class
+college/database/entities/Salesperson.class

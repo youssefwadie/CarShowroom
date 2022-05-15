@@ -7,10 +7,10 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "sales")
-@NamedQuery(name = Sale.GET_ALL_SALES, query = "SELECT s FROM Sale s")
+@NamedQuery(name = Sale.FIND_ALL, query = "SELECT s FROM Sale s")
 public class Sale implements Serializable {
 
-    public static final String GET_ALL_SALES = "Sale.getAll";
+    public static final String FIND_ALL = "Sale.getAll";
     @EmbeddedId
     private SaleId id;
     @Column(name = "date")

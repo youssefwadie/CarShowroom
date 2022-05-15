@@ -1,7 +1,7 @@
 package college.database.cli;
 
 import college.database.config.EntityManagerProducer;
-import college.database.service.Queries;
+import college.database.service.PerformQueries;
 
 import java.util.Scanner;
 
@@ -19,6 +19,7 @@ public class Main {
         }
 
         int choice = 0;
+        PerformQueries performQueries = new PerformQueries();
         do {
             printMenu();
             choice = handleInput();
@@ -29,34 +30,34 @@ public class Main {
             }
             switch (choice) {
                 case 1:
-                    Queries.query1();
+                    performQueries.query1();
                     break;
                 case 2:
-                    Queries.query2();
+                    performQueries.query2();
                     break;
                 case 3:
-                    Queries.query3();
+                    performQueries.query3();
                     break;
                 case 4:
-                    Queries.query4();
+                    performQueries.query4();
                     break;
                 case 5:
-                    Queries.query5();
+                    performQueries.query5();
                     break;
                 case 6:
-                    Queries.query6();
+                    performQueries.query6();
                     break;
                 case 7:
-                    Queries.query7();
+                    performQueries.query7();
                     break;
                 case 8:
-                    Queries.query8();
+                    performQueries.query8();
                     break;
                 case 9:
-                    Queries.query9();
+                    performQueries.query9();
                     break;
                 case 10:
-                    Queries.query10();
+                    performQueries.query10();
                     break;
                 default:
                     System.out.printf("%sNot implemented yet!%s%n", Colors.ANSI_RED, Colors.ANSI_RESET);

@@ -6,8 +6,10 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "cars_options")
+@NamedQuery(name = CarOption.FIND_ALL, query = "SELECT o FROM CarOption o")
 public class CarOption implements Serializable {
 
+    public static final String FIND_ALL = "carOption.findAll";
     @EmbeddedId
     private CarOptionId id;
 

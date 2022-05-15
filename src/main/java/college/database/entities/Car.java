@@ -8,39 +8,22 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "cars")
-@NamedQueries({
-        @NamedQuery(name = Car.GET_ALL_CARS_SORTED_BY_PRICE, query = "SELECT c FROM Car c ORDER BY c.price DESC"),
-        @NamedQuery(name = Car.GET_CAR_BY_MANUFACTURER_AND_MODEL, query = "SELECT c FROM Car c WHERE c.model = :model AND c.manufacturer = :manufacturer"),
-        @NamedQuery(name = Car.GET_CARS_IN_RANGE, query = "SELECT c FROM Car c WHERE c.price BETWEEN :minPrice AND :maxPrice"),
-        @NamedQuery(name = Car.GET_ALL_CARS_WITH_THEIR_OPTIONS, query = "SELECT DISTINCT c FROM Car c LEFT JOIN FETCH c.options"),
-})
+@NamedQuery(name = Car.FIND_ALL, query = "SELECT c FROM Car c")
 public class Car implements Serializable {
 
-    // All these queries can return multiple values in a different dataset so let's be as generic as we can
-    // 1
-    public static final String GET_CAR_BY_MANUFACTURER_AND_MODEL = "Car.findByManufacturerAndModel";
-
-    // 2
-    public static final String GET_CARS_IN_RANGE = "Car.findCarsWithPriceInRange";
-    // 3
-    public static final String GET_ALL_CARS_SORTED_BY_PRICE = "Car.findAllSorted";
-
-    // 4...
-
-    // 5
-    public static final String GET_ALL_CARS_WITH_THEIR_OPTIONS = "Car.findAllWithOptions";
+    public static final String FIND_ALL = "car.findAll";
 
     @Id
-    @Column(name = "serial_no")
+    @Column(name = "serial_no", nullable = false)
     private Integer serialNumber;
 
-    @Column(name = "model")
+    @Column(name = "model", nullable = false)
     private String model;
 
-    @Column(name = "manufacturer")
+    @Column(name = "manufacturer", nullable = false)
     private String manufacturer;
 
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private Double price;
 
     @OneToMany(mappedBy = "car")

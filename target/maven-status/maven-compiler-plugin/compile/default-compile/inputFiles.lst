@@ -1,0 +1,10 @@
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/config/EntityManagerProducer.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/entities/CarOptionId.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/entities/Car.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/entities/Salesperson.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/entities/SaleId.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/cli/Colors.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/entities/CarOption.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/service/Queries.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/cli/Main.java
+/home/youssef/code/college/database/CarShowroom/src/main/java/college/database/entities/Sale.java
