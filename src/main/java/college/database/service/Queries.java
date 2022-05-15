@@ -224,7 +224,6 @@ public class Queries {
 
     public static void query9() {
         EntityManager manager = EntityManagerProducer.createEntityManager();
-        String temp = " ";
         try {
             List<Salesperson> salesPeople =
                     manager.createNamedQuery(Salesperson.GET_SALESPEOPLE_WITH_ALL_THEIR_SALES, Salesperson.class)
@@ -232,19 +231,16 @@ public class Queries {
             System.out.println(Queries.separator);
             System.out.println(centerString("\tQuery 9") + "\n");
             for (Salesperson salesPerson : salesPeople) {
-                String curTemp = "";
                 BigDecimal totalPriceOfSales = salesPerson
                         .getSales()
                         .stream()
                         .map(Sale::getSalePrice)
                         .reduce(BigDecimal.ZERO, BigDecimal::add);
-                curTemp += salesPerson.getName() + salesPerson.getSales().size() +""+ totalPriceOfSales+"";
-                if (!curTemp.equals(temp)) {
-                    System.out.printf("\t%s sold %d cars, with total price = %.2f%n",
-                            salesPerson.getName(), salesPerson.getSales().size()
-                            , totalPriceOfSales);
-                    temp = curTemp;
-                }
+                String output = String.format("\t%s sold %d cars, with total price = %.2f",
+                        salesPerson.getName(),
+                        salesPerson.getSales().size(),
+                        totalPriceOfSales);
+                    System.out.println(output);
             }
             System.out.println(Queries.separator);
 

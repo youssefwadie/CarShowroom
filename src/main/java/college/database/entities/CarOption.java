@@ -6,17 +6,17 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "option_car")
+@Table(name = "car_option")
 public class CarOption implements Serializable {
 
     @EmbeddedId
     private CarOptionId id;
 
     @ManyToOne
-    @JoinColumn(name = "car_serial_no", referencedColumnName = "Serial_no", insertable = false, updatable = false)
+    @JoinColumn(name = "car_serial_no", referencedColumnName = "serial_no", insertable = false, updatable = false)
     private Car car;
     
-    @Column(name = "Price")
+    @Column(name = "price")
     private BigDecimal price;
 
     public CarOptionId getId() {

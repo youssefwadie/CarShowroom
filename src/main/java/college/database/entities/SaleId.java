@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Embeddable
 public class SaleId implements Serializable {
-    @Column(name = "sale_person_id")
+    @Column(name = "salesperson_id")
 
     private String salespersonId;
 
