@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7c69ff-f4f9-4684-b5ac-1e71e84df2c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/college/database/service/PerformQueries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/college/database/service/QueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/college/database/service/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quries/8.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/8.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/CarOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/CarOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/PerformQueries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/QueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/service/QueryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +116,7 @@
       <workItem from="1648288682074" duration="454000" />
       <workItem from="1652604229923" duration="7893000" />
       <workItem from="1652613220464" duration="734000" />
-      <workItem from="1652634646233" duration="4412000" />
+      <workItem from="1652634646233" duration="5932000" />
     </task>
     <servers />
   </component>
