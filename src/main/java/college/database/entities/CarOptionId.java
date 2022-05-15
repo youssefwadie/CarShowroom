@@ -8,16 +8,16 @@ import java.io.Serializable;
 @Embeddable
 public class CarOptionId implements Serializable {
     @Column(name = "car_serial_no")
-    private String carSerialNumber;
+    private Integer carSerialNumber;
 
     @Column(name = "option_name")
     private String optionName;
 
-    public String getCarSerialNumber() {
+    public Integer getCarSerialNumber() {
         return carSerialNumber;
     }
 
-    public void setCarSerialNumber(String carSerialNumber) {
+    public void setCarSerialNumber(Integer carSerialNumber) {
         this.carSerialNumber = carSerialNumber;
     }
 

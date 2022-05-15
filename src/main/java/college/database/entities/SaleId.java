@@ -8,12 +8,11 @@ import java.io.Serializable;
 @Embeddable
 public class SaleId implements Serializable {
     @Column(name = "salesperson_id")
-
     private String salespersonId;
 
 
     @Column(name = "car_serial_no")
-    private String carSerial;
+    private Integer carSerial;
 
     public String getSalespersonId() {
         return salespersonId;
@@ -23,11 +22,11 @@ public class SaleId implements Serializable {
         this.salespersonId = salespersonId;
     }
 
-    public String getCarSerial() {
+    public Integer getCarSerial() {
         return carSerial;
     }
 
-    public void setCarSerial(String carSerial) {
+    public void setCarSerial(Integer carSerial) {
         this.carSerial = carSerial;
     }
 }

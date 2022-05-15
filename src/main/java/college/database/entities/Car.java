@@ -32,7 +32,7 @@ public class Car implements Serializable {
 
     @Id
     @Column(name = "serial_no")
-    private String serialNumber;
+    private Integer serialNumber;
 
     @Column(name = "model")
     private String model;
@@ -46,11 +46,11 @@ public class Car implements Serializable {
     @OneToMany(mappedBy = "car")
     Collection<CarOption> options = new ArrayList<>();
 
-    public String getSerialNumber() {
+    public Integer getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(String serialNumber) {
+    public void setSerialNumber(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
 
