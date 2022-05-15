@@ -7,8 +7,11 @@ import college.database.entities.Sale;
 import college.database.entities.Salesperson;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
 import java.util.List;
 
+
+@NamedQuery(name = Sale.FIND_ALL, query = "SELECT s FROM Sale s")
 public class QueryService {
 
 

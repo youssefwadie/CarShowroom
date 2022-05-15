@@ -1,7 +1,7 @@
 package college.database.cli;
 
 import college.database.config.EntityManagerProducer;
-import college.database.service.PerformQueries;
+import college.database.service.Queries;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class Main {
         }
 
         int choice = 0;
-        PerformQueries performQueries = new PerformQueries();
+        Queries queries = new Queries();
         do {
             printMenu();
             choice = handleInput();
@@ -30,34 +30,34 @@ public class Main {
             }
             switch (choice) {
                 case 1:
-                    performQueries.query1();
+                    queries.query1();
                     break;
                 case 2:
-                    performQueries.query2();
+                    queries.query2();
                     break;
                 case 3:
-                    performQueries.query3();
+                    queries.query3();
                     break;
                 case 4:
-                    performQueries.query4();
+                    queries.query4();
                     break;
                 case 5:
-                    performQueries.query5();
+                    queries.query5();
                     break;
                 case 6:
-                    performQueries.query6();
+                    queries.query6();
                     break;
                 case 7:
-                    performQueries.query7();
+                    queries.query7();
                     break;
                 case 8:
-                    performQueries.query8();
+                    queries.query8();
                     break;
                 case 9:
-                    performQueries.query9();
+                    queries.query9();
                     break;
                 case 10:
-                    performQueries.query10();
+                    queries.query10();
                     break;
                 default:
                     System.out.printf("%sNot implemented yet!%s%n", Colors.ANSI_RED, Colors.ANSI_RESET);

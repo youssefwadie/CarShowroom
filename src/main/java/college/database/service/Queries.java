@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PerformQueries {
+public class Queries {
 
     private final static int windowWidth = 80;
 
@@ -20,7 +20,7 @@ public class PerformQueries {
 
     private final QueryService service;
 
-    public PerformQueries() {
+    public Queries() {
         service = new QueryService();
     }
 
@@ -40,13 +40,12 @@ public class PerformQueries {
             return;
         }
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 1") + "\n");
         System.out.printf("\t%s %s's serial number is %s, and its price = %s%n",
                 toyotaCorolla.getManufacturer(), toyotaCorolla.getModel(),
                 toyotaCorolla.getSerialNumber(), toyotaCorolla.getPrice().toString());
-        System.out.println("\n" + PerformQueries.separator);
-
+        System.out.println("\n" + Queries.separator);
     }
 
     public void query2() {
@@ -56,25 +55,25 @@ public class PerformQueries {
                 .filter(car -> car.getPrice() >= 150_000.0 && car.getPrice() <= 250_000)
                 .collect(Collectors.toList());
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 2") + "\n");
         for (Car car : filteredCars) {
             System.out.printf("\tCar's model is %s and its price = %.2f%n", car.getModel(), car.getPrice());
         }
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
     }
 
     public void query3() {
         Double afterInterest = 1.07d;
         List<Car> cars = service.findAllCars();
         cars.sort(Comparator.comparing(Car::getPrice));
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 3") + "\n");
         for (Car car : cars) {
             System.out.printf("\tCar's model = %s, price = %.2f, and price after adding interest = %.2f%n"
                     , car.getModel(), car.getPrice(), car.getPrice() * afterInterest);
         }
-        System.out.println("\n" + PerformQueries.separator);
+        System.out.println("\n" + Queries.separator);
     }
 
     public void query4() {
@@ -90,9 +89,9 @@ public class PerformQueries {
             }
         });
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("Report 1"));
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
 
         for (Car car : cars) {
             Double totalPrice = car.getPrice();
@@ -132,7 +131,7 @@ public class PerformQueries {
             }
         });
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 5") + "\n");
         for (Car car : cars) {
             Double optionsPrice = 0.0d;
@@ -145,7 +144,7 @@ public class PerformQueries {
                 System.out.printf("\tCar's model = %s, its options price = %.2f%n", car.getModel(), optionsPrice);
             }
         }
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
     }
 
 
@@ -155,33 +154,33 @@ public class PerformQueries {
                 .stream().filter(s -> s.getName().startsWith("s") || s.getName().startsWith("S"))
                 .collect(Collectors.toList());
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 6") + "\n");
         for (Salesperson salesPerson : salespeopleWithPrefix) {
             System.out.printf("\tSales Person: %s, phone: %s%n", salesPerson.getName(), salesPerson.getPhone());
         }
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
     }
 
     public void query7() {
         List<Salesperson> salespeopleWithNoNumber = service.findAllSalespeople()
                 .stream()
                 .filter(s -> s.getPhone().isEmpty()).collect(Collectors.toList());
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 7") + "\n");
         for (Salesperson salesPerson : salespeopleWithNoNumber) {
             System.out.printf("\t%s is salesperson with no number%n", salesPerson.getName());
         }
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
     }
 
 
     public void query8() {
         List<Sale> sales = service.findAllSales();
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("Report 2"));
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         for (Sale sale : sales) {
             String[] lines = new String[]{
                     String.format("Car model: %s", sale.getCar().getModel()),
@@ -189,7 +188,7 @@ public class PerformQueries {
                     String.format("Salesperson's name: %s", sale.getSalesperson().getName()),
                     String.format("Sales date: %s", sale.getSoldDate().toString()),
                     String.format("Sale price: %.2f", sale.getSalePrice()),
-                    PerformQueries.separator
+                    Queries.separator
             };
             for (String line : lines) {
                 System.out.println(centerString(line));
@@ -212,7 +211,7 @@ public class PerformQueries {
             }
         });
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 9") + "\n");
         for (Salesperson salesperson : salespeople) {
             Double totalPriceOfSales = salesperson
@@ -227,7 +226,7 @@ public class PerformQueries {
                     totalPriceOfSales);
             System.out.println(output);
         }
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
 
 
     }
@@ -241,7 +240,7 @@ public class PerformQueries {
             }
         }
 
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 10") + "\n");
         System.out.println("Cheapest car:");
         System.out.printf("\tSerial Number: %s%n", cheapestCar.getSerialNumber());
@@ -253,7 +252,7 @@ public class PerformQueries {
             System.out.printf("\tOption name: %10s%n", option.getId().getOptionName());
             System.out.printf("\tPrice = %10s%n", option.getPrice());
         }
-        System.out.println(PerformQueries.separator);
+        System.out.println(Queries.separator);
 
     }
 
