@@ -5,83 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b7c69ff-f4f9-4684-b5ac-1e71e84df2c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6429f3e3-c224-433f-82d3-93642c561031.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6429f3e3-c224-433f-82d3-93642c561031/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6429f3e3-c224-433f-82d3-93642c561031/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6429f3e3-c224-433f-82d3-93642c561031/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6429f3e3-c224-433f-82d3-93642c561031/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/941090b3-c2ca-4c7d-8ac6-0eba1135df1a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/941090b3-c2ca-4c7d-8ac6-0eba1135df1a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/941090b3-c2ca-4c7d-8ac6-0eba1135df1a/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/941090b3-c2ca-4c7d-8ac6-0eba1135df1a/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/941090b3-c2ca-4c7d-8ac6-0eba1135df1a/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af3a1957-90af-473d-ab81-e5535c0c8e70/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af3a1957-90af-473d-ab81-e5535c0c8e70/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af3a1957-90af-473d-ab81-e5535c0c8e70/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/af3a1957-90af-473d-ab81-e5535c0c8e70/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6e5a522-2990-4d5f-8119-1c2b962728b1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6e5a522-2990-4d5f-8119-1c2b962728b1/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6e5a522-2990-4d5f-8119-1c2b962728b1/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6e5a522-2990-4d5f-8119-1c2b962728b1/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6e5a522-2990-4d5f-8119-1c2b962728b1/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_19_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_6_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/10.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/10.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/2.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/3.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/3.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/4.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/4.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/5.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/5.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/6.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/6.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/7.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/7.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/8.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/8.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The Outputs/9.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/images/quries/9.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carshowroom.iml" beforeDir="false" afterPath="$PROJECT_DIR$/carshowroom.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/Excuation.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/query 4 (not complete).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/query 5.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/relational-model/relational_model.drawio" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/relational-model/relational_model.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.mwb.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/maven.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/installation/maven.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/q9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/userPassword.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/installation/userPassword.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/workbench.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/installation/workbench.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/cli/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/CarOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/CarOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/Salesperson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/service/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/CarOptionId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/CarOptionId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/college/database/entities/SaleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/college/database/entities/SaleId.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,24 +58,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="model.entities" />
@@ -182,7 +110,8 @@
       <workItem from="1648221324716" duration="8145000" />
       <workItem from="1648284884957" duration="60000" />
       <workItem from="1648288682074" duration="454000" />
-      <workItem from="1652604229923" duration="7557000" />
+      <workItem from="1652604229923" duration="7893000" />
+      <workItem from="1652613220464" duration="230000" />
     </task>
     <servers />
   </component>
