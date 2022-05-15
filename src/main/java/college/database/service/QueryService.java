@@ -7,15 +7,9 @@ import college.database.entities.Sale;
 import college.database.entities.Salesperson;
 
 import javax.persistence.EntityManager;
-import java.util.Collections;
 import java.util.List;
 
 public class QueryService {
-
-    private final static int windowWidth = 80;
-
-    // For java 11+, use " ".repeat(X)
-    private final static String separator = String.join("", Collections.nCopies(windowWidth, "="));
 
 
     public List<Car> findAllCars() {
