@@ -5,7 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="CarShowroomPU" value="f934fbfc-a985-4b03-9370-403d19575892" />
+          <factory-entry name="CarShowroomPU" value="215163a7-e823-4689-b7cc-cfbc4ede7a02" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
