@@ -23,7 +23,9 @@ public class Main {
         do {
             printMenu();
             choice = handleInput();
-            if (choice == -1) {
+			System.out.print("\033[H\033[2J");
+			System.out.flush();
+			if (choice == -1) {
                 System.out.printf("%sTerminating....%s%n", Colors.ANSI_GREEN, Colors.ANSI_RESET);
                 EntityManagerProducer.closeEntityManagerFactory();
                 continue;

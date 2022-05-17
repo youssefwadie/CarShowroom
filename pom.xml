@@ -8,6 +8,12 @@
     <artifactId>carshowroom</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>3.2.2</version>
+		</dependency>
         <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
@@ -37,7 +43,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
+				<version>3.2.2</version>
+				<configuration>
                     <archive>
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
