@@ -23,7 +23,7 @@ public class Car implements Serializable {
     @Column(name = "manufacturer", nullable = false)
     private String manufacturer;
 
-    @Column(name = "price", nullable = false)
+    @Column(name = "price", nullable = true)
     private Double price;
 
     @OneToMany(mappedBy = "car")

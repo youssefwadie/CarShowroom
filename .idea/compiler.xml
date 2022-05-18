@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Company" />
         <module name="carshowroom" />
+        <module name="autosales" />
       </profile>
     </annotationProcessing>
   </component>
