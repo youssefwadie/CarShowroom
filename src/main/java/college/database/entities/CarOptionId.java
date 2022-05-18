@@ -7,10 +7,10 @@ import java.io.Serializable;
 
 @Embeddable
 public class CarOptionId implements Serializable {
-    @Column(name = "car_serial_no")
+    @Column(name = "car_serial_no", nullable = false)
     private Integer carSerialNumber;
 
-    @Column(name = "option_name")
+    @Column(name = "option_name", nullable = false)
     private String optionName;
 
     public Integer getCarSerialNumber() {

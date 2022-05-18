@@ -13,18 +13,18 @@ public class Sale implements Serializable {
     public static final String FIND_ALL = "Sale.getAll";
     @EmbeddedId
     private SaleId id;
-    @Column(name = "date")
+    @Column(name = "date", nullable = false)
     private Date soldDate;
 
-    @Column(name = "sale_price")
+    @Column(name = "sale_price", nullable = false)
     private Double salePrice;
 
     @ManyToOne
-    @JoinColumn(name = "car_serial_no", referencedColumnName = "serial_no", updatable = false, insertable = false)
+    @JoinColumn(name = "car_serial_no", referencedColumnName = "serial_no", updatable = false, insertable = false, nullable = false)
     private Car car;
 
     @ManyToOne
-    @JoinColumn(name = "salesperson_id", referencedColumnName = "id", updatable = false, insertable = false)
+    @JoinColumn(name = "salesperson_id", referencedColumnName = "id", updatable = false, insertable = false, nullable = false)
     private Salesperson salesperson;
 
     public SaleId getId() {

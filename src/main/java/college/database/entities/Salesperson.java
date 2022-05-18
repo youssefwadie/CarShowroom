@@ -14,17 +14,16 @@ public class Salesperson implements Serializable {
     public static final String FIND_ALL = "salesperson.findAll";
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     private String id;
 
-    @Column(name = "name", unique = true)
+    @Column(name = "name")
     private String name;
 
     @Column(name = "phone")
     private String phone;
 
-    @OneToMany
-    @JoinColumn(name = "salesperson_id", referencedColumnName = "id")
+    @OneToMany(mappedBy = "salesperson")
     private Collection<Sale> sales = new ArrayList<>();
 
     public String getId() {

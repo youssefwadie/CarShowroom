@@ -17,7 +17,7 @@ public class CarOption implements Serializable {
     @JoinColumn(name = "car_serial_no", referencedColumnName = "serial_no", insertable = false, updatable = false)
     private Car car;
     
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private Double price;
 
     public CarOptionId getId() {
