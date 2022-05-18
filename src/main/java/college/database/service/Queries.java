@@ -7,7 +7,6 @@ import college.database.entities.Sale;
 import college.database.entities.Salesperson;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,15 +49,13 @@ public class Queries {
 
     public void query2() {
         List<Car> cars = service.findAllCars();
-        List<Car> filteredCars = cars
-                .stream()
-                .filter(car -> car.getPrice() >= 150_000.0 && car.getPrice() <= 250_000)
-                .collect(Collectors.toList());
 
         System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 2") + "\n");
-        for (Car car : filteredCars) {
-            System.out.printf("\tCar's model is %s and its price = %.2f%n", car.getModel(), car.getPrice());
+        for (Car car : cars) {
+            if (car.getPrice() >= 150_000.0 && car.getPrice() <= 250_000) {
+                System.out.printf("\tCar's model is %s and its price = %.2f%n", car.getModel(), car.getPrice());
+            }
         }
         System.out.println(Queries.separator);
     }
@@ -66,7 +63,10 @@ public class Queries {
     public void query3() {
         Double afterInterest = 1.07d;
         List<Car> cars = service.findAllCars();
-        cars.sort(Comparator.comparing(Car::getPrice));
+
+        // reversed order
+        cars.sort((car1, car2) -> car2.getPrice().compareTo(car1.getPrice()));
+
         System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 3") + "\n");
         for (Car car : cars) {
@@ -150,26 +150,26 @@ public class Queries {
 
     public void query6() {
         List<Salesperson> salespeople = service.findAllSalespeople();
-        List<Salesperson> salespeopleWithPrefix = salespeople
-                .stream().filter(s -> s.getName().startsWith("s") || s.getName().startsWith("S"))
-                .collect(Collectors.toList());
 
         System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 6") + "\n");
-        for (Salesperson salesPerson : salespeopleWithPrefix) {
-            System.out.printf("\tSales Person: %s, phone: %s%n", salesPerson.getName(), salesPerson.getPhone());
-        }
+        salespeople.forEach((Salesperson salesperson) -> {
+            String salespersonName = salesperson.getName();
+            if (salespersonName.startsWith("s") || salespersonName.startsWith("S")) {
+                System.out.printf("\tSales Person: %s, phone: %s%n", salesperson.getName(), salesperson.getPhone());
+            }
+        });
         System.out.println(Queries.separator);
     }
 
     public void query7() {
-        List<Salesperson> salespeopleWithNoNumber = service.findAllSalespeople()
-                .stream()
-                .filter(s -> s.getPhone().isEmpty()).collect(Collectors.toList());
+        List<Salesperson> salespeople = service.findAllSalespeople();
         System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 7") + "\n");
-        for (Salesperson salesPerson : salespeopleWithNoNumber) {
-            System.out.printf("\t%s is salesperson with no number%n", salesPerson.getName());
+        for (Salesperson salesperson : salespeople) {
+            if (salesperson.getPhone().isEmpty()) {
+                System.out.printf("\t%s is salesperson with no number%n", salesperson.getName());
+            }
         }
         System.out.println(Queries.separator);
     }
@@ -204,6 +204,7 @@ public class Queries {
 
         salespeople.forEach(salesperson -> {
             if (salesperson.getSales().isEmpty()) {
+                // If it's not retrieved
                 salesperson.setSales(sales.
                         stream()
                         .filter(sale -> sale.getId().getSalespersonId().equals(salesperson.getId()))
@@ -214,16 +215,17 @@ public class Queries {
         System.out.println(Queries.separator);
         System.out.println(centerString("\tQuery 9") + "\n");
         for (Salesperson salesperson : salespeople) {
-            Double totalPriceOfSales = salesperson
-                    .getSales()
-                    .stream()
-                    .map(Sale::getSalePrice)
-                    .reduce(0.0d, Double::sum);
 
+            double totalSalesPrice = 0.0d;
+            for (Sale sale : sales) {
+                if (sale.getId().getSalespersonId().equals(salesperson.getId())) {
+                    totalSalesPrice += sale.getSalePrice();
+                }
+            }
             String output = String.format("\t%s sold %d cars, with total price = %.2f",
                     salesperson.getName(),
                     salesperson.getSales().size(),
-                    totalPriceOfSales);
+                    totalSalesPrice);
             System.out.println(output);
         }
         System.out.println(Queries.separator);
@@ -235,7 +237,7 @@ public class Queries {
         List<Car> cars = service.findAllCars();
         Car cheapestCar = cars.get(0);
         for (int i = 1; i < cars.size(); i++) {
-            if (cars.get(i).getPrice().compareTo(cheapestCar.getPrice()) < 0) {
+            if (cars.get(i).getPrice().compareTo(cheapestCar.getPrice()) <= -1) {
                 cheapestCar = cars.get(i);
             }
         }
