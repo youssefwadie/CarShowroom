@@ -7,8 +7,6 @@
 Simple DataBase for Car Showroom interest in sales cars show another model of the another car and their Manufacturer.
 
 
-https://user-images.githubusercontent.com/61411650/168864400-f2cd3ff6-8e1a-49b8-94fa-0d2517254e45.mp4
-
 
 **Table of content**
 
